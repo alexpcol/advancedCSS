@@ -153,6 +153,9 @@ clip-path:  to draw shapes, in this case we draw a polygon, it can have I think 
 .btn--animated {
     /* animation: "name of the animation", time of the animation, animation timing function, delay*/
     animation: moveInBottom .5s ease-out .75s;
+    /* animation-fill-mode: property specifies a style for the element when the animation is not playing 
+        both = backwards
+    */
     animation-fill-mode: backwards;
 }
 
