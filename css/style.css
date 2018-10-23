@@ -27,7 +27,6 @@ html{
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
     padding: 3rem;
@@ -57,16 +56,16 @@ clip-path:  to draw shapes, in this case we draw a polygon, it can have I think 
 /*position: absolute = let me position my element with the top, right, bottom left 
                         attributtes it parent needs to have a relative position
                         (Like in autolayout)*/
-.logo-box{
+.header__logo-box{
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
-.logo{
+.header__logo{
     height: 3.5rem;
 }
 
-.header-box{
+.header__header-box{
     position: absolute;
     top: 40%;
     left: 50%;
@@ -81,7 +80,7 @@ clip-path:  to draw shapes, in this case we draw a polygon, it can have I think 
     backface-visibility: hidden;
     margin-bottom: 6rem;
 }
-.heading-primary-main {
+.heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -93,7 +92,7 @@ clip-path:  to draw shapes, in this case we draw a polygon, it can have I think 
     animation-timing-function: ease-out;
     */
 }
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -116,16 +115,16 @@ clip-path:  to draw shapes, in this case we draw a polygon, it can have I think 
 }
 /* Hover button state */
 .btn:hover{
-    transform: translateY(-3px);
+    transform: translateY(-.3rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0,0.2);
     /* box-shadow: xValue, yValue, blurrValue color of shadow */
 }
 /* click button state */
 .btn:active{
-    transform: translateY(-1px);
+    transform: translateY(-.1rem);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0,0.2);
 }
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
@@ -133,6 +132,7 @@ clip-path:  to draw shapes, in this case we draw a polygon, it can have I think 
     position: absolute;
     top: 0;
     left: 0;
+    /* content it's always necessary */
     content: "";
     display: inline-block;
     height: 100%;
@@ -147,12 +147,13 @@ clip-path:  to draw shapes, in this case we draw a polygon, it can have I think 
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
 }
-.btn-white::after{
+.btn--white::after{
     background-color: #fff
 }
-.btn-animated {
+.btn--animated {
+    /* animation: "name of the animation", time of the animation, animation timing function, delay*/
     animation: moveInBottom .5s ease-out .75s;
-    animation-fill-mode: backwards
+    animation-fill-mode: backwards;
 }
 
 
