@@ -1,6 +1,5 @@
 .row{
     max-width: $row-max-width;
-    background-color: #eee;
     margin: 0 auto;
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
@@ -8,7 +7,7 @@
     @include clearfix;
  // Here you select all the classes that start with col-
     [ class^= "col-" ]{
-        background-color: orangered;
+
         float: left;
         &:not(:last-child){
             margin-right: $gutter-horizontal;
