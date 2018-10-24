@@ -58,6 +58,7 @@ clip-path:  to draw shapes, in this case we draw a polygon, it can have I think 
     background-position: top;
     position: relative;
     clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+    -webkit-clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
 }
 /*position: absolute = let me position my element with the top, right, bottom left 
                         attributtes it parent needs to have a relative position
