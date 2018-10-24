@@ -10,14 +10,6 @@
     clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
     -webkit-clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
 
-    /*position: absolute = let me position my element with the top, right, bottom left 
-                        attributtes it parent needs to have a relative position
-                        (Like in autolayout)*/
-    &____logo-box{
-        position: absolute;
-        top: 4rem;
-        left: 4rem;
-    }
 
     &__logo{
         height: 3.5rem;
@@ -30,5 +22,11 @@
         transform: translate(-50%,-50%);
         text-align: center;
     
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
     }
 }
