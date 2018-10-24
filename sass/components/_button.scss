@@ -1,0 +1,61 @@
+.btn{
+    /* Initial button state */
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+    }
+    /* Hover button state */
+    &:hover{
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black,0.2);
+        /* box-shadow: xValue, yValue, blurrValue color of shadow */
+
+        &::after
+        {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    /* click button state */
+    &:active{
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black,0.2);
+    }
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+        &::after{
+            background-color: $color-white
+        }
+    }
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* content it's always necessary */
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        z-index: -1;
+        transition: all .4s;
+
+    }
+    
+    &--animated {
+        /* animation: "name of the animation", time of the animation, animation timing function, delay*/
+        animation: moveInBottom .5s ease-out .75s;
+        /* animation-fill-mode: property specifies a style for the element when the animation is not playing 
+            both = backwards
+        */
+        animation-fill-mode: backwards;
+    }
+}
