@@ -275,14 +275,7 @@ body {
   background-position: top;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /*position: absolute = let me position my element with the top, right, bottom left 
-                        attributtes it parent needs to have a relative position
-                        (Like in autolayout)*/ }
-  .header____logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header__logo {
     height: 3.5rem; }
   .header__header-box {
@@ -291,6 +284,10 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
 
 .row {
   max-width: 114rem;
